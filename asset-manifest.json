@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/etcbrain/static/css/main.e6c13ad2.css",
+    "main.js": "/etcbrain/static/js/main.ef68a6de.js",
+    "index.html": "/etcbrain/index.html",
+    "main.e6c13ad2.css.map": "/etcbrain/static/css/main.e6c13ad2.css.map",
+    "main.ef68a6de.js.map": "/etcbrain/static/js/main.ef68a6de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ef68a6de.js"
+  ]
+}
