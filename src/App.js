@@ -1,39 +1,20 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const content = [
-  {
-    tab:"Section 1",
-    content:"I'm the content of the Section 1"
-  },
-  {
-    tab:"Section 2",
-    content:"I'm the content of the Section 2"
-  }
-];
-
-const useTabs = (initialTab, allTabs) => {
-  const [currentIndex, setCurrentIndex] = useState(initialTab);
-  if(!allTabs || !Array.isArray(allTabs)){
-    return;
-  }
-
-  return {
-    currentItem: allTabs[currentIndex],
-    changeItem: setCurrentIndex
-  };
-};
-
+import Refactoring from "./routes/refactoring/Refactoring";
+import Home from "./routes/Home";
 const App = () => {
-  const {currentItem, changeItem} = useTabs(0, content);
   
   return (
-    <div className="App">
-      <h1>Hey</h1>
-      {content.map((section, i) => (
-        <button onClick={() => changeItem(i)} key={section.tab}>{section.tab}</button>
-      ))}
-      <div>{currentItem.content}</div>      
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/refactoring">
+          <Refactoring />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
